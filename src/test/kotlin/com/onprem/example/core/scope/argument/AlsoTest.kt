@@ -4,7 +4,8 @@ import com.onprem.example.Person
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-//ALSO is a scope function using the object as an argument.
+//ALSO is a scope function using the object as an argument that also returns that object.
+//Any implied lambda result is ignored.
 //Thus, it refers to the object as 'it'.
 //When using ALSO, think:
 //"...and also do the following with the object"
