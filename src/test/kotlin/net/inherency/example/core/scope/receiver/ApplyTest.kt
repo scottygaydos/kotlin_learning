@@ -1,6 +1,6 @@
-package com.onprem.example.core.scope.receiver
+package net.inherency.example.core.scope.receiver
 
-import com.onprem.example.Person
+import net.inherency.example.Person
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

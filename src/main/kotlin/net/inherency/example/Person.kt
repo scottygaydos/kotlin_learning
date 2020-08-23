@@ -1,4 +1,4 @@
-package com.onprem.example
+package net.inherency.example
 
 data class Person (
         val name: String,

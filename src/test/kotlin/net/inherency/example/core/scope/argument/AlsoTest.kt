@@ -1,6 +1,6 @@
-package com.onprem.example.core.scope.argument
+package net.inherency.example.core.scope.argument
 
-import com.onprem.example.Person
+import net.inherency.example.Person
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
