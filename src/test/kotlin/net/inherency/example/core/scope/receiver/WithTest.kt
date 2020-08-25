@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 //WITH is a scope function using the object as a receiver that returns the lambda result.
 //Thus, it refers to the object as 'this'.
 //WITH is interesting because it is not an extension function; it is a top level function.
-//WITH is good at assigning things.  When using WITH, think:
+//WITH is good for quick/clean mapping that reduces references to 'it'.  When using WITH, think:
 //"With this object, do the following things..."
 class WithTest {
 

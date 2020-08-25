@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Test
 //APPLY is a scope function using the object as a receiver that returns the original object.
 //Any lambda 'result' is ignored the original object is what is always returned.
 //Thus, it refers to the object as 'this'.
-//APPLY is good at assigning things.  When using APPLY, think:
+//APPLY is good at assigning things; it acts like a pseudo-builder or pseudo-constructor.
+// When using APPLY, think:
 //"apply the following assignments to the object."
 class ApplyTest {
 
