@@ -12,7 +12,7 @@ class ResultTest {
 
     @Test
     fun `RESULT is a wrapper for success or failure where success is a generic type`() {
-        val person = Person("Scotty", 38)
+        val person = Person("Scotty", 38, emptyList())
         val result = Result.success(person)
 
         assertEquals(person, result.getOrThrow())
@@ -31,7 +31,7 @@ class ResultTest {
 
     @Test
     fun `RESULT fold is a fancy conditional map over success and failure where only success is used for success condition`() {
-        val person = Person("Scotty", 38)
+        val person = Person("Scotty", 38, emptyList())
         val result = Result.success(person)
 
         val fold = result.fold(

@@ -1,4 +1,4 @@
-package net.inherency.example
+package net.inherency.example.core
 
 import java.time.LocalTime
 
@@ -23,7 +23,7 @@ fun maybeMakeAddressDTO(inputTime: LocalTime): AddressDTO? {
     }
 }
 
-fun process(): String? {
+fun demoScopeFunctions(): String? {
     return maybeMakeAddressDTO(LocalTime.now())?.let {
         "${it.name}::${it.description}"
     }.also {

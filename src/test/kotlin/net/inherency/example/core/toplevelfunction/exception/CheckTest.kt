@@ -8,7 +8,7 @@ class CheckTest {
     @Test
     fun `CHECK throws IllegalStateException when the condition is not met`() {
         assertThrows<IllegalStateException> {
-            check(false)
+            check(false) {"Optional lazy message"}
         }
     }
 }

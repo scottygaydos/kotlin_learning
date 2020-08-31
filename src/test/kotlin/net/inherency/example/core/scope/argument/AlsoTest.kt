@@ -21,7 +21,7 @@ class AlsoTest {
         }
 
         //ALSO does not return the message!
-        Assertions.assertEquals("Person(name=Scotty, age=38)", result.toString())
+        Assertions.assertEquals("Person(name=Scotty, age=38, emailList=[])", result.toString())
     }
 
     @Test

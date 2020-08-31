@@ -10,7 +10,7 @@ class LazyTest {
     @Test
     fun `LAZY makes lazily initialized things`() {
         val lazyPerson = lazy {
-            Person("Scotty", 38)
+            Person("Scotty", 38, emptyList())
         }
 
         assertFalse(lazyPerson.isInitialized())
@@ -19,7 +19,7 @@ class LazyTest {
     @Test
     fun `LAZY initializes when we call get`() {
         val lazyPerson = lazy {
-            Person("Scotty", 38)
+            Person("Scotty", 38, emptyList())
         }
 
         lazyPerson.value
