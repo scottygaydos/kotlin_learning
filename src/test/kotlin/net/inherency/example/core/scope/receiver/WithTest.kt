@@ -26,14 +26,14 @@ class WithTest {
             //explicitly named/created functions.
         }
 
+        println(person)
+
         assertEquals(38, newAge)
     }
 
     @Test
     fun `WITH can help reduce variables and reference calls`() {
-        val person = Person("Scotty", 37)
-
-        val correctAge = with(person.age) {
+        val correctAge = with(Person("Scotty", 37).age) {
             when(this) {
                 36 -> false
                 37 -> true
