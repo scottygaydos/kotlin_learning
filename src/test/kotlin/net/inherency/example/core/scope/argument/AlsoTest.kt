@@ -15,7 +15,7 @@ class AlsoTest {
     fun `ALSO is good for implementing desired side effects`() {
         val scotty = Person("Scotty", 37)
 
-        val result = scotty.also {
+        scotty.also {
             println("Happy birthday $scotty.  You are now ${scotty.age + 1}")
         }
 
