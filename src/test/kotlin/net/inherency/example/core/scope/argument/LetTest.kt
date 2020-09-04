@@ -36,36 +36,7 @@ class LetTest {
         assertEquals(0, counter)
     }
 
-    @Test
-    fun `LET on a null object executes the lambda when the safety check is inside LET`() {
-        val nullPerson: Person? = null
-        var counter = 0
-
-        nullPerson.let {
-            val ignored = it?.age?.plus(1)
-            counter += 1
-            ignored
-        }
-
-        assertEquals(1, counter)
-    }
-
-    //This is probably bad by convention.
-    @Test
-    fun `LET calls a function block using object as argument and CAN mutate it (but we should not do this!)`() {
-        val scotty = Person("Scotty", 37)
-
-        scotty.let {
-            //Calling this age setter probably bad by convention.
-            it.age = it.age + 1
-            "Happy birthday ${it.name}. You are ${it.age} today!"
-        }
-
-        //Because LET returns the birthday message, we should not mutate the age in the block.
-        //See ALSO for a better mutate option.
-        assertEquals(38, scotty.age)
-    }
-
+    //Danger!  Be aware!
     @Test
     fun `LET calls a function block on null objects and executes the function block regardless`() {
         val nullPerson: Person? = null
@@ -75,18 +46,5 @@ class LetTest {
         }
 
         assertEquals("Happy birthday null.", birthdayMessage)
-    }
-
-    //This is probably bad by convention.
-    @Test
-    fun `LET calls a function block on null objects and can modify variables`() {
-        val nullPerson: Person? = null
-        var shouldChange = 0
-
-        nullPerson.let {
-            shouldChange++
-        }
-
-        assertEquals(1, shouldChange)
     }
 }

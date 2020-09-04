@@ -34,31 +34,4 @@ class RunTest {
         assertEquals(38, newAge)
     }
 
-    //This is probably not good by convention
-    @Test
-    fun `RUN top level function can alter variables passed into scope try not to do this!`() {
-        var counter = 0
-
-        run {
-            counter += 1
-            2
-        }
-
-        assertEquals(1, counter)
-    }
-
-    //This is probably not good by convention
-    @Test
-    fun `RUN extension function can alter variables passed into scope try not to do this!`() {
-        var counter = 0
-
-        Person("Scotty", 37).run {
-            counter += 1
-            val newAge = age + 1
-            newAge
-        }
-
-        assertEquals(1, counter)
-    }
-
 }

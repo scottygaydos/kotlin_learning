@@ -12,7 +12,18 @@ import org.junit.jupiter.api.Test
 class AlsoTest {
 
     @Test
-    fun `ALSO calls a function block using object as argument and returns thee object itself`() {
+    fun `ALSO is good for implementing desired side effects`() {
+        val scotty = Person("Scotty", 37)
+
+        val result = scotty.also {
+            println("Happy birthday $scotty.  You are now ${scotty.age + 1}")
+        }
+
+    }
+
+    @Test
+    //I really wish also didn't allow mutation and didn't return anything.
+    fun `ALSO calls a function block using object as argument and returns the object itself`() {
         val scotty = Person("Scotty", 37)
 
         val result = scotty.also {
@@ -20,45 +31,7 @@ class AlsoTest {
             "Happy birthday ${it.name}. You are ${it.age} today!" //useless!
         }
 
-        //ALSO does not return the message!
+        //ALSO does not return the message!  It returns the person... use APPLY for this instead.
         Assertions.assertEquals("Person(name=Scotty, age=38, emailList=[])", result.toString())
     }
-
-    @Test
-    fun `ALSO calls a function block using object as argument and CAN mutate it`() {
-        val scotty = Person("Scotty", 37)
-
-        scotty.also {
-            it.age = it.age + 1
-        }
-
-        Assertions.assertEquals(38, scotty.age)
-    }
-
-    @Test
-    fun `ALSO calls a function block on null objects and executes the function block regardless`() {
-        val nullPerson: Person? = null
-
-        val stillTheNullPerson: Person? = nullPerson.also {
-            "Happy birthday $it." //This is highlighted by IntelliJ because it is never used.
-        }
-
-        //This is really nice!  Kotlin allows toString() on a null object,
-        //and kotlin doesn't throw an exception!
-        Assertions.assertEquals("null", stillTheNullPerson.toString())
-    }
-
-    //This is probably bad by convention.
-    @Test
-    fun `ALSO calls a function block on null objects and can modify variables`() {
-        val nullPerson: Person? = null
-        var shouldChange = 0
-
-        nullPerson.also {
-            shouldChange++
-        }
-
-        Assertions.assertEquals(1, shouldChange)
-    }
-
 }

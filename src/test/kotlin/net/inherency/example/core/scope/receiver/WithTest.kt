@@ -12,28 +12,6 @@ import org.junit.jupiter.api.Test
 class WithTest {
 
     @Test
-    fun `WITH assigns or mutates values in an object with an explicit use of THIS keyword`() {
-        val person = Person("Scotty", 37)
-        with(person) {
-            this.age = 38
-        }
-
-        Assertions.assertEquals(38, person.age)
-    }
-
-    @Test
-    fun `WITH assigns or mutates values in an object with an implicit use of THIS keyword`() {
-        val person = Person("Scotty", 37)
-
-        with(person) {
-            age += 1
-            age
-        }
-
-        Assertions.assertEquals(38, person.age)
-    }
-
-    @Test
     fun `WITH returns the result of the lambda`() {
         val person = Person("Scotty", 37)
 

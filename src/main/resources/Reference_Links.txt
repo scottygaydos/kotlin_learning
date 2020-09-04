@@ -1,0 +1,1 @@
+https://medium.com/dont-code-me-on-that/kotlin-cheatsheet-scope-functions-let-run-apply-also-with-308c8e5533f4
