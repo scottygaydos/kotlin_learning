@@ -1,0 +1,37 @@
+Presentation 09/04/2020
+Focus: API!  (Not really syntax)
+
+1. Objects
+  Unit
+  Any
+  Nothing
+  Pair and Triple
+    Automatic Typed Destructuring
+  Result
+
+2. Infix
+  To
+
+3. Top Level Functions
+  Repeat
+  Error
+  Check
+  Require
+  TakeIf
+  TakeUnless
+  Lazy
+
+4. Scope Functions
+  Whole documentation page dedicated to them: https://kotlinlang.org/docs/reference/scope-functions.html
+  Argument-type (named, aka 'it')
+    Let
+    Also
+  Receiver-type (this)
+    Apply
+    Run
+    With
+  Things to Avoid...
+  Decent graphic/table displays to help remind yourself and distinguish these...
+    scope_functions.png
+    Reference_Links.txt
+  Examples: ScopeFunctionPracticeDemo

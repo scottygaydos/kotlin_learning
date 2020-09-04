@@ -1,4 +1,4 @@
-package net.inherency.example.core.exception
+package net.inherency.example.core.objects
 
 import net.inherency.example.Person
 import org.junit.jupiter.api.Assertions.*
