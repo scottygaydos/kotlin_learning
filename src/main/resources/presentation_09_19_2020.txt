@@ -1,0 +1,17 @@
+Presentation 09/19/2020
+Focus: API - Collections
+
+1. Basic Collections Functions
+2. Functional approaches
+  a. map
+  b. filter
+  c. reduce / fold
+  d. simplified reduce functions like sum
+3. onEach vs forEach
+4. sort vs sorted (in place vs returned)
+5. partition
+6. flatMap vs flatten
+7. null-friendly array/list getters
+8. chunked
+9. grouping
+10. windowed

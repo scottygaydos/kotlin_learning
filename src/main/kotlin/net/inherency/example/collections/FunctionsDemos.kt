@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package net.inherency.example.collections
 
 @Suppress("UNUSED_VARIABLE")
@@ -36,7 +38,7 @@ fun demoGrouping() {
     //groupingBy allows for values comprised of lists to be aggregated with accumulators using aggregate, fold, or reduce (traditional functional methods)
     //groupingBy returns Groupings instead of maps!
     val groupBy = listOf(1, 2, 3, 4).groupingBy { if(it % 2 == 0) "even" else "odd" }
-    val groupByResult = groupBy.aggregate { key, accumulator: Int?, element, first ->
+    val groupByResult = groupBy.aggregate { _, accumulator: Int?, element, first ->
         if (first)
             element
         else
@@ -44,7 +46,7 @@ fun demoGrouping() {
     }
     println(groupByResult)
 
-    println(listOf(1, 2, 3, 4).groupingBy { if (it % 2 == 0) "even" else "odd" }.reduce { key, accumulator, element ->
+    println(listOf(1, 2, 3, 4).groupingBy { if (it % 2 == 0) "even" else "odd" }.reduce { _, accumulator, element ->
         accumulator + element
     })
 
@@ -123,8 +125,12 @@ fun demoBasicFunctionalApproaches() {
     val sum = oddNumbers.reduce { acc: Int, next: Int -> acc + next }
     println(sum)
 
+    val altSum = oddNumbers.foldRight(0){ acc: Int, next: Int -> acc + next }
+    println(altSum)
+
     //There are many convenience functions, too
     println(oddNumbers.sum())
+    println()
     println(oddNumbers.average())
     println(ints.runningReduce { acc: Int, next: Int -> acc + next })
     println(strings.joinToString())
@@ -140,6 +146,8 @@ fun demoFlatMapVsFlatten() {
     @Suppress("SimplifiableCall")
     val flatMap = listOfLists.flatMap { it }
     val flatten = listOfLists.flatten()
+    println(flatMap)
+    println(flatten)
 }
 
 fun demoPartition() {

@@ -21,14 +21,14 @@ fun demoCore() {
 }
 
 fun demoCollections() {
-    demoBasicCollections()
-    demoBasicFunctionalApproaches()
-    demoOnEachVsForEach()
-    demoSortVsSorted()
-    demoPartition()
-    demoFlatMapVsFlatten()
-    demoNullFriendlyArrayAndListGetters()
-    demoChunked()
-    demoGrouping()
-    demoWindowed()
+//    demoBasicCollections()
+//    demoBasicFunctionalApproaches()
+//    demoOnEachVsForEach()
+//    demoSortVsSorted()
+//    demoPartition()
+//    demoFlatMapVsFlatten()
+//    demoNullFriendlyArrayAndListGetters()
+//    demoChunked()
+//    demoGrouping()
+//    demoWindowed()
 }
