@@ -11,9 +11,6 @@ import net.inherency.example.range.demoLoopOverRange
 import net.inherency.example.sequence.demoGenerateSequence
 
 fun main() {
-    //demoCore()()
-    //demoCollections()
-
     demoRanges()
     demoSequences()
 }
