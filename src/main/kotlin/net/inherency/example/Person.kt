@@ -3,7 +3,8 @@ package net.inherency.example
 data class Person (
         val name: String,
         var age: Int,
-        val emailList: List<String> = emptyList()
+        val emailList: List<String> = emptyList(),
+        val nickname: String? = null
 ): Comparable<Person> {
 
     override fun compareTo(other: Person): Int {

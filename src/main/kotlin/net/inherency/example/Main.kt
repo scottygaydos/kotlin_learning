@@ -3,6 +3,7 @@
 package net.inherency.example
 
 import net.inherency.example.collections.*
+import net.inherency.example.contracts.demoContracts
 import net.inherency.example.core.demoPairsAndTriplesAndDestructuring
 import net.inherency.example.core.demoScopeFunctions
 import net.inherency.example.range.demoCustomRange
@@ -11,8 +12,7 @@ import net.inherency.example.range.demoLoopOverRange
 import net.inherency.example.sequence.demoGenerateSequence
 
 fun main() {
-    demoRanges()
-    demoSequences()
+    demoContracts()
 }
 
 fun demoRanges() {
