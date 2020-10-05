@@ -1,0 +1,11 @@
+Presentation 10/02/2020
+Focus: API - Ranges and Sequences
+
+1. Ranges
+  a. integral ranges
+  b. custom ranges
+  c. looping over integral ranges (arithmetic progressions)
+2. Sequences
+  a. custom
+  b. built-in functions
+  c. laziness
