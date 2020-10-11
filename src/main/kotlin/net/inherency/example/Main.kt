@@ -9,10 +9,12 @@ import net.inherency.example.core.demoScopeFunctions
 import net.inherency.example.range.demoCustomRange
 import net.inherency.example.range.demoIntRange
 import net.inherency.example.range.demoLoopOverRange
+import net.inherency.example.reflect.demoReflection
 import net.inherency.example.sequence.demoGenerateSequence
 
 fun main() {
     demoContracts()
+    demoReflection()
 }
 
 fun demoRanges() {

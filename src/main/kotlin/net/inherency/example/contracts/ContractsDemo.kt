@@ -67,6 +67,7 @@ private fun demoTypeCastingContract() {
     val arrayList: List<Int> = arrayListOf(1, 2, 3)
     validateIsArrayList(arrayList)
     arrayList.add(4) //Suddenly, we can add items to the List
+    println()
 }
 
 

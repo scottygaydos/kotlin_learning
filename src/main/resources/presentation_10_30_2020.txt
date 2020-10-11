@@ -1,0 +1,5 @@
+Presentation 10/30/2020
+Focus: API - Contracts and Reflection
+
+1. Contracts
+2. Reflection
